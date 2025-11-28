@@ -43,38 +43,18 @@ Once the project opens:
 1. Open one of the scenes from the `Assets/Scenes` folder:
    - **ClothScene.unity** - Cloth simulation only
    - **JellyScene.unity** - Jelly cube simulation with spawner
-   - **ClothJellyScene.unity** - Combined cloth and jelly simulation
-
-2. Click the **Play** button (▶) at the top center of the Unity editor
-
-3. Interact with the simulation using the controls listed below
-
-4. Click **Play** again to stop the simulation
-
-### Building an Executable (Optional)
-
-1. Go to `File > Build Settings`
-2. Select your target platform (e.g., Windows, Mac, Linux)
-3. Click "Build" or "Build and Run"
-4. Choose an output location
-5. Run the generated executable
 
 ## Available Scenes
 
 ### 1. ClothScene
 - Demonstrates cloth physics simulation
-- Features a hanging cloth or trampoline setup
+- Features a hanging cloth
 - Includes wind effects and gravity
 
 ### 2. JellyScene
 - Interactive jelly cube spawning system
 - Click on surfaces to spawn soft-body jelly cubes
 - Jellies bounce, deform, and interact with the environment
-
-### 3. ClothJellyScene
-- Combined simulation with both cloth and jelly cubes
-- Full interactive environment
-- Demonstrates jelly-to-jelly collision
 
 ## Controls
 
