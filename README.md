@@ -194,10 +194,3 @@ JellySimulation/
 - Check ground Y value matches floor position
 - Ensure collision layers are set correctly
 
-## Credits
-
-This project was developed as a demonstration of real-time physics simulation techniques using mass-spring systems and numerical integration methods.
-
-## Contact for Grading
-
-If you encounter any issues running this project, please contact the student for assistance or clarification.
