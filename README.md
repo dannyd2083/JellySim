@@ -55,6 +55,9 @@ Once the project opens:
 - Interactive jelly cube spawning system
 - Click on surfaces to spawn soft-body jelly cubes
 - Jellies bounce, deform, and interact with the environment
+- Includes jelly-to-jelly collision detection
+
+**Note**: ClothJellyScene exists in the project but is not fully functional due to performance issues with cloth-jelly collision detection.
 
 ## Controls
 
@@ -65,16 +68,10 @@ Once the project opens:
 - **W/A/S/D Keys**: Pan camera horizontally
 - **Q/E Keys**: Pan camera vertically (down/up)
 
-### Jelly Spawning (JellyScene & ClothJellyScene)
+### Jelly Spawning (JellyScene)
 - **Left Mouse Click** on a surface: Spawn a jelly cube
 - Jellies auto-despawn after 10 seconds (configurable)
 - Maximum of 15 jellies at once (configurable)
-
-### Mode Switching (ClothJellyScene)
-- **Left Mouse Click** on empty space: Camera control mode
-- **Left Mouse Click** on wind source object: Wind source control mode
-  - When wind source is selected, it highlights in yellow
-  - You can then manipulate the wind source properties
 
 ## Features
 
@@ -84,7 +81,7 @@ Once the project opens:
 - **Collision Detection**:
   - Ground collision with restitution (bounciness)
   - Environment collision (walls, obstacles)
-  - Jelly-to-jelly collision (in ClothJellyScene)
+  - Jelly-to-jelly collision with spatial hashing optimization
 - **Soft Body Dynamics**: Realistic deformation and recovery
 
 ### Jelly Simulation
@@ -96,7 +93,6 @@ Once the project opens:
 ### Cloth Simulation
 - **2D Particle Grid**: Configurable resolution (default: 30x30)
 - **Hanging Cloth Mode**: Pins top row of particles
-- **Trampoline Mode**: Pins four corners for horizontal layout
 - **Wind Simulation**:
   - Global wind with turbulence (Perlin noise)
   - Local wind sources
@@ -152,7 +148,7 @@ JellySimulation/
 - **OrbitCamera.cs**: Orbit camera with pan and zoom
 
 ### Systems
-- **CollisionManager.cs**: Manages inter-jelly collisions
+- **CollisionManager.cs**: Manages jelly-to-jelly collisions using spatial hashing
 - **WindSource.cs**: Generates wind forces at particle positions
 
 ## Configuration Tips
@@ -167,9 +163,8 @@ JellySimulation/
 
 ### Adjusting Cloth Properties (Inspector)
 - **Grid Width/Height**: Cloth resolution
-- **Is Trampoline Mode**: Enable for horizontal cloth with corner pins
-- **Is Horizontal Layout**: XZ plane vs XY plane orientation
 - **Use Wind Source**: Toggle wind effects
+- **Use Global Wind**: Enable global wind with turbulence
 
 ### Performance Optimization
 - Reduce grid size (fewer particles)
