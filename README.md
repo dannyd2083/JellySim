@@ -5,7 +5,7 @@ A Unity project demonstrating real-time physics simulation of soft bodies (jelly
 ## Prerequisites
 
 - **Unity Version**: 2022.3.62f3 or compatible
-- **Platform**: Windows, macOS, or Linux
+- **Platform**: Windows
 - **Unity Modules Required**:
   - Universal Windows Platform (if building for UWP)
   - Standard Unity modules (already included in default installation)
